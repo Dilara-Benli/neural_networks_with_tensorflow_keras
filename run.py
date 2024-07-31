@@ -9,7 +9,7 @@ trainer = ModelTraining('breast_cancer_dataset.xlsx')
 #trainer.save_model_and_history(ann_model, history, 'saved_models/model1.h5', 'saved_histories/history1.json') 
 
 # kaydedilen model ve history yükle
-loaded_ann_model, loaded_history = trainer.load_model('saved_models/model1.h5', 'saved_histories/history1.json') 
+loaded_ann_model, loaded_history = trainer.load_model_and_history('saved_models/model1.h5', 'saved_histories/history1.json') 
 
 # kaydedilen modelin değerlendirme metriklerini(accuracy, precision gibi) yazdır
 trainer.calculate_evaluation_metrics(loaded_ann_model)

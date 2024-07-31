@@ -52,7 +52,7 @@ class ModelTraining:
             json.dump(history.history, f)
         print(f"Model saved to {model_path} and history saved to {history_path}")
 
-    def load_model(self, model_path, history_path):
+    def load_model_and_history(self, model_path, history_path):
         model = tf.keras.models.load_model(model_path, custom_objects={
             'specificity': specificity,
             'F1_Score': F1_Score,
